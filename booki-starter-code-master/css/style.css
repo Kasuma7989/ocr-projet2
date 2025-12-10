@@ -7,6 +7,7 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --dark-grey : dimgrey;
 }
 
 .fa-solid {
@@ -38,8 +39,8 @@ nav {
 }
 
 .menu:hover {
-    border-color: #0065FC;
-    color: #0065FC;
+    border-color: var(--main-color);
+    color: var(--main-color);
 }
 
 form {
@@ -48,12 +49,12 @@ form {
 }
 
 form i {
-    background-color: #F2F2F2;
+    background-color: var(--main-bg-color);
     padding: 12px 13px 10px 13px;
     border-radius: 15px 0 0 15px;
 }
 form input {
-    border: 1px solid #F2F2F2;
+    border: 1px solid var(--main-bg-color);
     font-size: 18px;
     font-weight: bold;
     padding: 12px 0 15px 10px;
@@ -67,9 +68,9 @@ form h1 {
 }
 form button {
     border-radius: 0 14px 14px 0;
-    background-color: #0065FC;
+    background-color: var(--main-color);
     border: none;
-    color: white;
+    color: var(--main-bg-color);
     font-weight: bold;
     font-size: 16px;
     padding: 15px 16px 15px 16px;
@@ -80,7 +81,7 @@ form button {
     display: none;
 }
 form button:hover {
-    box-shadow: 1px 1px 10px darkgray;
+    box-shadow: 1px 1px 10px var(--dark-grey);
 }
 .fa-solid {
     padding: 16px 16px 18px 16px;
@@ -100,15 +101,15 @@ form button:hover {
 }
 .bouttons-filtres {
     font-weight: bold;
-    border: 2px solid #D9D9D9;
+    border: 2px solid var(--main-bg-color);
     border-radius: 25px;
 }
 
 .bouttons-filtres .fa-solid {
-    color: #0065FC;
+    color: var(--main-color);
 }
 .bouttons-filtres:hover {
-    background-color: #DEEBFF;
+    background-color: var(--filter-bg-color);
 }
 .bouttons-filtres .fa-heart, .fa-fire, .fa-money-bill-wave {
     padding: 14px 14px 14px 14px;
@@ -127,9 +128,9 @@ form button:hover {
     font-size: 15px;
 }
 .fa-solid.fa-info {
-    border: 1px solid #D9D9D9;
+    border: 1px solid var(--main-bg-color);
     border-radius: 50%;
-    color: #0065FC;
+    color: var(--main-color);
     height: 25px;   
     width: 25px;
     font-size: 16px;
@@ -165,12 +166,6 @@ a {
     font-size: 22px;
 }
 
-.card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
 
 .card img {
     object-fit: cover;
@@ -184,31 +179,225 @@ a {
     font-weight: 700;
 }
 
-.neutral-star {
-    color: var(--main-bg-color)
-}
-
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;;
 }
 
-.hebergements-and-populaires section {
+.hebergements-and-populaires > section {
+    border-radius: 16px;
     background-color: var(--main-bg-color);
-    border-radius: 20px;
-    padding: 30px;
-    box-sizing: border-box;
+}
+.hebergements-and-populaires h3 {
+    padding-left: 20px;
+}
+.hebergements-and-populaires .hebergements{
+    flex-basis: 66%;
+}
+.hebergements-and-populaires .populaires{
+    flex-basis: 33%;
 }
 
 /****** Hebergements ***********/
 .hebergements {
-    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0 10px 0 10px;
+}
+.hebergements h3 {
+    width: 100%;
 }
 
+.hebergements a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-hebergement {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+.card-hebergement div {
+    flex-basis: calc(33% - 40px);
+    min-width: 220px;
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 5px;
+    flex-grow: 1;
+    margin: 0 10px 10px 10px;
+    box-shadow: 0 0 8px lightgrey;
+    transition: all 0.2s;
+}
+
+.card img {
+    border-radius: 16px 16px 0 0;
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+}
+.card p, .card h4 {
+    margin: 5px
+}
+.card:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+.card .stars {
+    margin-top: auto;
+}
+
+.card-rating i.fa-solid {
+    color: var(--main-color);
+}
+.card-rating i.neutral-star {
+    color: var(--main-bg-color);
+}
+.card-rating i {
+    margin-right: -34px !important;
+}
+.card-rating {
+    margin-left: -10px;
+    margin-top: -8px;
+}
+
+
+.activites {
+    margin: 60px 0 40px 0;         
+}
+
+.activites h3 {
+    font-size: 22px;
+    margin-bottom: 40px;
+    margin-left: 25px;
+}
+
+.liste-activites {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card-activites {
+    width: 297.5px;                
+    height: 439px;                  
+    border-radius: 20px;
+    overflow: hidden;             
+    box-shadow: 0 0 8px lightgrey;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-activites img {
+    width: 100%;
+    height: calc(100% - 60px);  
+    object-fit: cover;
+    flex-grow: 1;
+}
+
+.card-activites h4 {
+    margin: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+.card-activites:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 8px lightgray;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color: var(--main-bg-color);
+    padding: 40px 50px 10px 50px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;   
+    max-width: 1440px;
+    margin: 0 auto;
+    gap: 100px;                       
+    flex-wrap: wrap;                 
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 15px;
+}
+
+.footer-column a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /****** Populaires ***********/
+.populaires-title .fa-chart-line {
+    color: var(--main-color);
+}  
+
+
+
 .populaires {
     width: 32%;
+    padding: 20px;
+
 }
 
 .populaires-title {
@@ -241,6 +430,7 @@ a {
 .populaires-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
+    margin-left: -20px;
 }
 
 .populaires-cards .card-subtitle {
@@ -250,6 +440,14 @@ a {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+
+
+
+
+
+
+
+
 
 
 
