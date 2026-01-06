@@ -428,7 +428,7 @@ a {
 
 
 
-/* FOOTER */
+/* Footer */
 
 
 footer {
@@ -491,12 +491,19 @@ footer {
 
 
 @media (max-width: 1024px) {
+
+
+    /* hebergements et populaires */
+
+
     .hebergements-and-populaires {
         flex-direction: column;
         width: 100%;
         box-sizing: border-box;
     }
     
+    /* hebergements */
+
     .hebergements {
         width: 100%;
         box-sizing: border-box;
@@ -506,6 +513,8 @@ footer {
     .hebergements h3 {
         padding-left: 0 !important;
     }
+
+    /* populaires */
 
     .populaires {
         width: 100%;
@@ -563,6 +572,8 @@ footer {
         font-size: 13px;
     }
 
+    /* filtres */
+
     .filtres {
         display: flex;
         flex-wrap: wrap;
@@ -573,6 +584,9 @@ footer {
         flex-basis: 100%;
         margin: 0;
     }
+
+    /* cards */
+
     .card-activites {
         height: 270px;
     }
@@ -581,6 +595,8 @@ footer {
         object-fit: cover;
         flex-shrink: 0;
     }
+
+    /* footer */
 
     .footer-container {
         display: flex;
@@ -610,9 +626,8 @@ footer {
         flex-direction: column-reverse; 
     }
 
-    /*
-    *   section: menu 
-    */
+    /* menu */
+    
     .menu {
         width: 50%;
         padding: 15px 0;
@@ -662,9 +677,7 @@ footer {
     }
 
 
-/* 
-*   Section: Search bar 
-*/
+    /* Barre de recherche */
 
     .search-bar {
         width: 100%;
@@ -702,9 +715,7 @@ footer {
 
     
   
-    /* 
-    *       filters 
-    */
+    /* filtres */
 
     .filtres {
         display: flex;
@@ -750,10 +761,7 @@ footer {
     }
 
 
-    /* 
-    *       hébergments 
-    */
-
+    /* hebergements */
 
     .hebergements {
         padding: 30px 20px !important;
@@ -804,9 +812,8 @@ footer {
     }
 
 
-    /* 
-    *       popular 
-    */
+    /* populaires */
+
     .populaires {
         background-color: var(--main-bg-color) !important;
         padding: 30px 20px !important;
@@ -899,10 +906,7 @@ footer {
 
 
 
-    /* 
-    *       activites marseille 
-    */
-
+    /* activites a Marseille */
 
     .activites {
         margin-top: 50px;
@@ -936,9 +940,8 @@ footer {
 
 
 
-    /* 
-    *       footer 
-    */
+    /* footer */
+
     footer {
         margin: 0 -20px;
         margin-top: 70px;
