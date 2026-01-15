@@ -99,9 +99,6 @@ form button:hover {
 }
 
 
-
-
-
 /* Filtres */
 
 
@@ -111,6 +108,10 @@ form button:hover {
     flex-flow: row wrap;
     align-items: center;
     gap: 20px;
+}
+.filtres h2 {
+    font-size: 20px;
+    margin: 0;
 }
 .bouttons-filtres p {
     margin: 0;
@@ -717,10 +718,11 @@ footer {
         gap: 10px;
     }
     
-    .filtres h3 {
+    .filtres h2 {
         flex-basis: 100%; 
         width: 100%;
         margin: 0 0 5px 0;
+        font-size: 18px;
     }
 
     .fa-solid.fa-info {
