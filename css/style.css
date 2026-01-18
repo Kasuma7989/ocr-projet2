@@ -99,6 +99,9 @@ form button:hover {
 }
 
 
+
+
+
 /* Filtres */
 
 
@@ -110,7 +113,7 @@ form button:hover {
     gap: 20px;
 }
 .filtres h2 {
-    font-size: 20px;
+    font-size: 18px;
     margin: 0;
 }
 .bouttons-filtres p {
@@ -673,10 +676,12 @@ footer {
 
     .search-bar {
         width: 100%;
+        max-width: 100%;
     }
 
     .search-bar input {
         flex: 1;
+        min-width: 0;
     }
     form button {
         border-radius: 15px; 
@@ -686,6 +691,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
     }
 
     .fa-solid.fa-magnifying-glass {
@@ -697,7 +703,16 @@ footer {
     }
     
     form i.fa-location-dot {
-        padding: 16px 20px;
+        padding: 16px 18px;
+        flex-shrink: 0;
+    }
+
+    form input {
+        border: 1px solid var(--main-bg-color);
+        font-size: 16px;
+        font-weight: bold;
+        padding: 12px 5px;
+        margin-left: -5px;
     }
 
 
@@ -737,22 +752,30 @@ footer {
         flex: 0 0 calc(50% - 5px); 
         max-width: calc(50% - 5px);
         box-sizing: border-box;
+        font-size: 11px;
+        display: flex;
+        align-items: center;
     }
     
     .bouttons-filtres p {
         margin: 0;
-        padding-right: 20px;
-        white-space: nowrap; 
+        padding-right: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .bouttons-filtres .fa-heart, 
     .bouttons-filtres .fa-fire, 
     .bouttons-filtres .fa-money-bill-wave {
-        margin-right: -5px;
-        padding: 14px 14px 14px 14px;
+        margin-right: 5px;
+        padding: 12px;
+        flex-shrink: 0;
     }
     
     .bouttons-filtres .fa-child-reaching {
         margin-right: 5px;
+        padding: 12px;
+        flex-shrink: 0;
     }
 
 
